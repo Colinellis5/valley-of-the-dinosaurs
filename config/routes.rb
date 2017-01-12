@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "dinosaurs/:id" => "dinosaurs#show", as: :dinosaur
 
   post "dinosaurs" => "dinosaurs#create"
+
+  get 'dinosaurs/:id/edit' => 'dinosaurs#edit', as: :edit_dinosaur
+  patch "dinosaurs/:id" => "dinosaurs#update"
 end
